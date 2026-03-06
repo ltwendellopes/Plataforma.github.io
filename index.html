@@ -2,64 +2,73 @@
   
   <title>PRIME</title>
   <link rel="shortcut icon" href="https://primebeneficios.com.br/assets-prime/images/favicon.png?v=1" type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <link rel="stylesheet" href="CSS.css">
+  <script src="java.js"></script>
 </head>
-<!-- poup - up -->
-<script>
-function abrirPopup() {
-  document.getElementById("popup").style.display = "flex";
-}
-
-function confirmarPopup() {
-  document.getElementById("popup").style.display = "none";
-
-  // salva a data para abrir só 1 vez por dia
-  const hoje = new Date().toDateString();
-  localStorage.setItem("dataPopup", hoje);
-}
-window.onload = function() {
-
-  const hoje = new Date().toDateString();
-  const ultimaVez = localStorage.getItem("dataPopup");
-
-  if (ultimaVez !== hoje) {
-    abrirPopup();
-  }
-
-};
-</script>
 <body>
-
-  <!-- SIDEBAR -->
+  
   <div class="sidebar">
     <div class="sidebar-header">
       <img src="Imagens/Logo prime.png" alt="Logo Prime" style="height: 90px;">
     </div>
 
-    <!-- OPERACIONAIS GESTÃO -->
     <div class="menu-section">
       <div class="menu-title active" onclick="toggleMenu(this)">
         <span>LINKS SISTEMAS</span>
-        <span class="menu-icon open">▼</span>
+        <span class="menu-icon">▼</span>
       </div>
-      <div class="menu-items open">
+      <div class="menu-items">
+        <div class="menu-item"><a href="https://www.primebeneficios.com.br/Intranet/Frota" target="_blank">SISATEC</a></div>
         <div class="menu-item"><a href="https://portal-bi.primebeneficios.com.br/" target="_blank">Portal B.I</a></div>
         <div class="menu-item"><a href="https://sip.sisatec.com.br/Os/Index" target="_blank">SIP</a></div>
         <div class="menu-item"><a href="https://gestao.sisatec.com.br/Admin/Home/" target="_blank">Gestão</a></div>
         <div class="menu-item"><a href="https://primebeneficios.sharepoint.com/sites/grupo.plataforma/GESTO%20PLATAFORMA/Forms/AllItems.aspx?id=%2Fsites%2Fgrupo%2Eplataforma%2FGESTO%20PLATAFORMA%2FCarteira%20de%20Clientes&viewid=557e6a54%2Ddb0f%2D4f3c%2D91ef%2D9b06272dfafc" target="_blank">Carteira clientes</a></div>
-        <div class="menu-item"><a href="https://gestao.sisatec.com.br/Admin/cliente/Planilhas.aspx" target="_blank">NEXCORE</a></div>
+        <div class="menu-item"><a href="https://euro.cloudnexcore.com.br/ncall/main.php?inicio=1" target="_blank">NEXCORE</a></div>
         <div class="menu-item"><a href="https://primebeneficios.becompliance.com/compliance/login" target="_blank">Be Compliance</a></div>
       </div>
     </div>
 
-    <!-- OPERACIONAIS -->
+    <div class="menu-section">
+      <div class="menu-title active" onclick="toggleMenu(this)">
+        <span>FERAMENTAS DE VALIDAÇÂO</span>
+        <span class="menu-icon">▼</span>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item"><a href="https://client.suiv.com.br/" target="_blank">SUIV</a></div>
+        <div class="menu-item"><a href="https://br.qapter.com/sso/login?service=https%3a%2f%2fbr.qapter.com%2fbreclient%2fui%3fprocess%3dNO_PROCESS%26step%3dWorkListGrid" target="_blank">QAPTER</a></div>
+        <div class="menu-item"><a href="https://cesvi.orionbr.com.br/ORION/OFICINAS/ORCAMENTOS/#/account/login" target="_blank">ORION</a></div>
+        <div class="menu-item"><a href="https://sistema.cilia.com.br/users/sign_in" target="_blank">CILIA </a></div>
+        <div class="menu-item"><a href="https://compras.menorpreco.pr.gov.br/novodocumento/consulta" target="_blank">MENOR PREÇO PARANÁ  </a></div>
+      </div>
+    </div>
+    <div class="menu-section">
+      <div class="menu-title active" onclick="toggleMenu(this)">
+        <span>REVISÕES PREÇO FIXO/GARANTIAS</span>
+        <span class="menu-icon">▼</span>
+      </div>
+      <div class="menu-items">
+        <div class="menu-item"><a href="https://sites.google.com/view/mitservicos/mit-revis%C3%B5es" target="_blank">MITSUBISHI</a></div>
+        <div class="menu-item"><a href="https://www.toyota.com.br/meu-toyota/servicos/revisoes-periodicas" target="_blank">TOYOTA</a></div>
+        <div class="menu-item"><a href="https://caoachery.com.br/revisao" target="_blank">CAOA CHERY</a></div>
+        <div class="menu-item"><a href="https://www.vwbr.com.br/revisao" target="_blank">VOLKSWAGEN</a></div>
+        <div class="menu-item"><a href="https://www.jeep.com.br/proprietarios/revisao-programada.html" target="_blank">JEEP</a></div>
+        <div class="menu-item"><a href="https://www.chevrolet.com.br/servicos/revisao?ppc=GOOGLE_700000001288334_71700000081031671_58700006811283751_p64795549562___2023_Search_Reg00_Pos-Vendas_Impression-Share_Revisao_2020+%7C+SEARCH+%7C+REG00+%7C+AON+%7C+P%C3%93S+VENDAS+%7C+REVIS%C3%83O+%7C+COBALT_Revis%C3%A3o+chevrolet&&ppc=2020_NA_NA_WM_SEARCH_Other_OTHER_NA_Dynamic_BR_POR_Campanha_PosVendasNacional_revisao_GA_revisaoCobalt_KW_AM_RevisaochevroletFrase&gclid=EAIaIQobChMIvujM5ezmgAMVROZcCh1LmANfEAAYASABEgLUrfD_BwE&gclsrc=aw.ds" target="_blank">CHEVROLET</a></div>
+        <div class="menu-item"><a href="https://servicos.renault.com.br/revisao-preco-fechado" target="_blank">RENAULT</a></div>
+        <div class="menu-item"><a href="https://www.hyundai.com.br/manutencao.html" target="_blank">HYUNDAI</a></div>
+        <div class="menu-item"><a href="https://servicos.fiat.com.br/revisao.html#" target="_blank">FIAT</a></div>
+        <div class="menu-item"><a href="https://www.ford.com.br/servico-ao-cliente/revisao-preco-fixo/ranger/" target="_blank">FORD</a></div>
+        <div class="menu-item"><a href="https://www.honda.com.br/pos-venda/automoveis/" target="_blank">HONDA</a></div>
+        <div class="menu-item"><a href="https://www.yamaha-motor.com.br/servicos" target="_blank">YAMAHA</a></div>
+      </div>
+    </div>
     <div class="menu-section">
       <div class="menu-title active" onclick="toggleMenu(this)">
         <span>SOLICITAÇÕES</span>
-        <span class="menu-icon open">▼</span>
+        <span class="menu-icon">▼</span>
       </div>
-      <div class="menu-items open">
-        <div class="menu-item"><a href="https://app.ahgora.com.br/externo/',%20'_blank" target="_blank">Ponto</a></div>
+      <div class="menu-items">
+        <div class="menu-item"><a href="https://app.ahgora.com.br/externo/" target="_blank">Ponto</a></div>
         <div class="menu-item"><a href="https://suporte.fitcard.com.br/" target="_blank">GLPI</a></div>
       </div>
     </div>
@@ -68,49 +77,60 @@ window.onload = function() {
   <!-- CONTEÚDO PRINCIPAL -->
   <div class="main-content">
     <div class="header">
-      <h1>Prime Benefícios</h1>
+      <h1>Prime Benefícios  PLATAFORMA</h1>
     </div>
+
     <h2>POPs</h2>
     <div class="form-grid">
       <div class="form-card">
         <h3>1 - POP Plataforma</h3>
-        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/sites/grupo.plataforma/GESTO%20PLATAFORMA/Forms/AllItems.aspx?viewid=557e6a54%2Ddb0f%2D4f3c%2D91ef%2D9b06272dfafc&id=%2Fsites%2Fgrupo%2Eplataforma%2FGESTO%20PLATAFORMA%2FPOP%2F1%20POP%20PLATAFORMA%2Epdf&parent=%2Fsites%2Fgrupo%2Eplataforma%2FGESTO%20PLATAFORMA%2FPOP', '_blank')">PDF</button>
+        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/sites/grupo.plataforma/GESTO%20PLATAFORMA/Forms/AllItems.aspx?viewid=557e6a54%2Ddb0f%2D4f3c%2D91ef%2D9b06272dfafc&id=%2Fsites%2Fgrupo%2Eplataforma%2FGESTO%20PLATAFORMA%2FPOP%2F1%20POP%20PLATAFORMA%2Epdf&parent=%2Fsites%2Fgrupo%2Eplataforma%2FGESTO%20PLATAFORMA%2FPOP', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">picture_as_pdf</span> 
+        PDF</button>
       </div>
       <div class="form-card">
         <h3>2 - Aguardando envio de veiculo</h3>
-        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/2%20POP%20ABA%20AGUARDANDO%20ENVIO%20VEICULO.pdf?csf=1&web=1&e=TbF7Yo', '_blank')">PDF</button>
+        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/2%20POP%20ABA%20AGUARDANDO%20ENVIO%20VEICULO.pdf?csf=1&web=1&e=TbF7Yo', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">picture_as_pdf</span> 
+        PDF</button>
       </div>
       <div class="form-card">
         <h3>3 - Aguardando 1° orçamento</h3>
-        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/3%20POP%20AGUARDANDO%201%20OR%C3%87AMENTO%20PDF.pdf?csf=1&web=1&e=NOKQmR', '_blank')">PDF</button>
+        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/3%20POP%20AGUARDANDO%201%20OR%C3%87AMENTO%20PDF.pdf?csf=1&web=1&e=NOKQmR', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">picture_as_pdf</span> 
+        PDF</button>
       </div>
       <div class="form-card">
         <h3>4 - Validação 1 orçamento</h3>
-        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/4%20POP%20VALIDA%C3%87%C3%83O%201%20OR%C3%87AMENTO.pdf?csf=1&web=1&e=wFfDfi', '_blank')">PDF</button>
+        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/4%20POP%20VALIDA%C3%87%C3%83O%201%20OR%C3%87AMENTO.pdf?csf=1&web=1&e=wFfDfi', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">picture_as_pdf</span> 
+        PDF</button>
       </div>
       <div class="form-card">
         <h3>5 - Cotação</h3>
-        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/5%20POP%20COTA%C3%87%C3%83O.pdf?csf=1&web=1&e=XIpqdw', '_blank')">PDF</button>
+        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/5%20POP%20COTA%C3%87%C3%83O.pdf?csf=1&web=1&e=XIpqdw', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">picture_as_pdf</span> 
+        PDF</button>
       </div>
        <div class="form-card">
         <h3>6 - Reavaliação</h3>
-        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/6%20POP%20REAVALIA%C3%87%C3%83O.pdf?csf=1&web=1&e=ooAff0', '_blank')">PDF</button>
+        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/6%20POP%20REAVALIA%C3%87%C3%83O.pdf?csf=1&web=1&e=ooAff0', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">picture_as_pdf</span> 
+        PDF</button>
       </div>
       <div class="form-card">
         <h3>7 - Liberação aprovação</h3>
-        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/7%20POP%20LIBERA%C3%87%C3%83O%20APROVA%C3%87%C3%83O.pdf?csf=1&web=1&e=cJ3Amh', '_blank')">PDF</button>
+        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/7%20POP%20LIBERA%C3%87%C3%83O%20APROVA%C3%87%C3%83O.pdf?csf=1&web=1&e=cJ3Amh', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">picture_as_pdf</span> 
+        PDF</button>
       </div>
       <div class="form-card">
         <h3>8 - Aprovadas</h3>
-        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/8%20POP%20OS%20APROVADA.pdf?csf=1&web=1&e=mJ51Gp', '_blank')">PDF</button>
+        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/8%20POP%20OS%20APROVADA.pdf?csf=1&web=1&e=mJ51Gp', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">picture_as_pdf</span> 
+        PDF</button>
       </div>
       <div class="form-card">
         <h3>9 - Validação NF </h3>
-        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/9%20POP%20VALIDA%C3%87%C3%83O%20NF%20CLEAN.pdf?csf=1&web=1&e=Nn3tO9', '_blank')">PDF</button>
+        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/9%20POP%20VALIDA%C3%87%C3%83O%20NF%20CLEAN.pdf?csf=1&web=1&e=Nn3tO9', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">picture_as_pdf</span> 
+        PDF</button>
       </div>
       <div class="form-card">
         <h3>10 - NF C/Problema </h3>
-        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/11%20POP%20NF%20C%20PROBLEMAS.pdf?csf=1&web=1&e=dAnRqd', '_blank')">PDF</button>
+        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:b:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/POP/11%20POP%20NF%20C%20PROBLEMAS.pdf?csf=1&web=1&e=dAnRqd', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">picture_as_pdf</span> 
+        PDF</button>
       </div>
       </div>
       
@@ -118,7 +138,9 @@ window.onload = function() {
     <div class="form-grid">
       <div class="form-card">
         <h3>LUP</h3>
-        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:w:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/LUP/LUP%20Alinhamento%20sobre%20Coment%C3%A1rios%20de%20OS%27s%20PRIME.docx?d=weebdaf09b65b4f279c2af91335126ad9&csf=1&web=1&e=wRISUm','_blank')">DOC</button> 
+        <button class="button-fitcard" onclick="window.open('https://primebeneficios.sharepoint.com/:w:/r/sites/grupo.plataforma/GESTO%20PLATAFORMA/LUP/LUP%20Alinhamento%20sobre%20Coment%C3%A1rios%20de%20OS%27s%20PRIME.docx?d=weebdaf09b65b4f279c2af91335126ad9&csf=1&web=1&e=wRISUm','_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">docs</span> 
+        Arquivo
+</button> 
       </div>
     </div>
 
@@ -126,13 +148,13 @@ window.onload = function() {
     <div class="form-grid">
       <div class="form-card">
         <h3>T.I</h3>
-        <button class="button-fitcard" onclick="window.open('https://form.asana.com/?k=I7ZXL1Nr-tyzolYT7sPNeA&d=516216748503279', '_blank')">Formulário</button>
-        <button class="button-fitcard" onclick="window.open('https://app.asana.com/1/516216748503279/project/1203676023984496/board/1204055700885503', '_blank')">Quadro</button>
+        <button class="button-fitcard" onclick="window.open('https://form.asana.com/?k=I7ZXL1Nr-tyzolYT7sPNeA&d=516216748503279', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">select_check_box</span>Formulário</button>
+        <button class="button-fitcard" onclick="window.open('https://app.asana.com/1/516216748503279/project/1203676023984496/board/1204055700885503', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">view_compact_alt</span>Quadro</button>
       </div>
       <div class="form-card">
         <h3>B.I</h3>
-        <button class="button-fitcard" onclick="window.open('https://form.asana.com/?k=ZRcmUyCgjEqRkrLSadIUGg&d=516216748503279', '_blank')">Formulário</button>
-        <button class="button-fitcard" onclick="window.open('https://app.asana.com/1/516216748503279/project/1185351678792284/board/1205104074433397', '_blank')">Quadro</button>
+        <button class="button-fitcard" onclick="window.open('https://form.asana.com/?k=ZRcmUyCgjEqRkrLSadIUGg&d=516216748503279', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">select_check_box</span>Formulário</button>
+        <button class="button-fitcard" onclick="window.open('https://app.asana.com/1/516216748503279/project/1185351678792284/board/1205104074433397', '_blank')"><span class="material-symbols-outlined" style="font-size: 18px;">view_compact_alt</span>Quadro</button>
       </div>
       </div>
     </div>
