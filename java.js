@@ -18,3 +18,11 @@ window.onload = function() {
   }
 
 };
+    function toggleMenu(element) {
+      const icon = element.querySelector('.menu-icon');
+      const items = element.nextElementSibling;
+      
+      icon.classList.toggle('open');
+      items.classList.toggle('open');
+      element.classList.toggle('active');
+    }
